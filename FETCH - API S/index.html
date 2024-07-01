@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FECTH</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      button {
+        padding: 5px 20px;
+        cursor: pointer;
+        background-color: #888;
+        color: white;
+        border-radius: 5px;
+        border: 2px solid black;
+      }
+      p,label{
+        font-size: large;
+      }
+    </style>
+  </head>
+  <!-- NÃO CONSEGI CONTINUAR A EXECUSÃO POIS NÃO POSSUO OS APLICATIVOS E SITES USADOS PARA FINALIZAR -->
+  <body>
+    <label>Nome Do heroi:</label>
+    <input type="text" id="txtNome">
+    <button id="btnEnviar">Enviar</button>
+    <!-- NÂO CONFUNDA O INPUT NOME COM O TXT DO NOMe -->
+    <p id="txtName"></p>
+    <p id="txtNivel"></p>
+    <p id="txtVida"></p>
+    <p id="txtMana"></p>
+    <button id="btnFecth">RECEBER</button>
+    
+    <script>
+      const txtName = document.getElementById("txtName");
+      const txtNivel = document.getElementById("txtNivel");
+      const txtVida = document.getElementById("txtVida");
+      const txtMana = document.getElementById("txtMana");
+      const btnFeth = document.getElementById("btnFecth");
+      const txtNome = document.getElementById("txtNome");
+      const btnEnviar = document.getElementById("btnEnviar");
+
+
+      //PEGANDO O URL DA API
+      const endpoint =
+          "https://543fbe51-2d93-4941-a77c-ee6ff32d8e28-00-1iwr5xn8azyyg.picard.replit.dev/";
+      //RECEBENDO DADOS PARA A API
+      btnFeth.addEventListener("click", ()=>{
+        //UTILIZANO O FECTH
+        fetch(endpoint)//Chamando a API
+          .then((res) => res.json())//PASSANDO OS DADOS PARA JSON
+          .then((dados) => {//PEGANDO OS DADOS DE JSON E ADICIONANDO AS TXTS
+            // console.log(dados);
+            txtName.innerHTML = `Vida: ${dados.nome}`;
+            txtVida.innerHTML = `Vida: ${dados.vida}`;
+            txtNivel.innerHTML = `Nivel: ${dados.nivel}`;
+            txtMana.innerHTML = `Mana: ${dados.mana}`;
+          });
+      });
+
+      //ENVIANDO DADOS PARA API
+      btnEnviar.addEventListener("click",()=>{
+        let dados = {//Pegando os dados
+            nome:txtNome.value
+        }
+        
+        let cabecalho = {//FAZENDO A CONFIGURAÇÂO DO FETCH
+            method:"POST",
+            body:JSON.stringify(dados)
+        }
+
+        //Enviando os dados
+        fetch(endpoint,cabecalho)
+        .then(res=>res.json())
+        .then(ret=>{
+            console.log(ret);
+        });
+      });
+    </script>
+  </body>
+</html>

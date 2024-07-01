@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        border: none;
+        padding: 0px;
+        margin: 0px;
+      }
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      #painel {
+        width: 100px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        transform: translate(-50%);
+      }
+      button {
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        background-color: #ccc;
+        padding: 10px;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+      }
+      #btnDireita,
+      #btnEsquerda {
+        width: 50%;
+      }
+      .carro {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        transform-origin: center center;
+        background: url(carro.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: drop-shadow(0 0 1rem blue);
+        transform: rotate(-90deg);
+        /* animation: andar 0.5s linear forwards; */
+
+      }
+
+      .boost{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        padding: 50px;
+      }
+
+      /* @keyframes andar {
+        0%{
+            left: 0px;
+        }
+        100%{
+            left: 100px;
+        }
+    } */
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animação</title>
+  </head>
+  <body>
+    <div id="painel">
+      <button id="btnCima">&#8593;</button>
+      <button id="btnEsquerda">&#8592;</button>
+      <button id="btnDireita">&#8594;</button>
+      <button id="btnBaixo">&#8595;</button>
+    </div>
+    <div id="carro" class="carro"></div>
+    <script src="script.js"></script>
+
+  </body>
+</html>

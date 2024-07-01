@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historico de páginas</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            border: none;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        input,button{
+            margin-bottom: 10px;
+        }
+        input{
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button{
+            background-color: gray;
+            padding: 5px 30px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Historico</h1>
+    <form onsubmit="event.preventDefault()">
+        <input type="url" name="url" id="url" placeholder="https://www.devbytestudios.com.br" pattern="https://.*" size="30" required/>
+        <button id="btnUrl">IR</button>
+    </form>
+    <script>
+        const url = document.getElementById("url");
+        const btnUrl = document.getElementById("btnUrl");
+        
+        btnUrl.addEventListener("click",(evt)=>{
+            // window.location = "https://google.com"
+            // window.history.go(1);
+            console.log(url.value);
+            window.location = url.value;
+        });
+    </script>
+</body>
+</html>

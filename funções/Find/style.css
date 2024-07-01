@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    font-size: large;
+}
+
+.caixa{
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+
+.verde{
+    border-color: rgb(47, 255, 71) !important;
+    background-color: greenyellow !important;
+}
+
+.vermelho{
+    border-color: rgb(255, 47, 47) !important;
+    background-color: rgb(244, 131, 131) !important;
+}
+
+.azul{
+    border-color: rgb(78, 47, 255) !important;
+    background-color: rgb(159, 144, 242) !important;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+input{
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+}

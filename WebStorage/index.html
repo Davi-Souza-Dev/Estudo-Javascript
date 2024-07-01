@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStorage</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 20px;
+        }
+        input{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        button{
+            padding: 5px 20px;
+            cursor: pointer;
+            background-color: #888;
+            color: white;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="txtTexto">
+        <br/>
+        <p id="txtMsg"></p>
+        <button id="btnAdd">WebStorage</button>
+    </form>
+    <script>
+        const txtTexto = document.getElementById("txtTexto");
+        const txtMsg = document.getElementById("txtMsg");
+        const btnAdd = document.getElementById("btnAdd");
+
+        btnAdd.addEventListener("click",(evt)=>{
+
+        });
+
+        let num = 10;
+        //Acessando o local storage
+        // window.localStorage.setItem("Numero",num);
+        localStorage.setItem("Numero",num);
+        alert(localStorage.getItem("Numero"));  
+    </script>
+</body>
+</html>

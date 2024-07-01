@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 20px;
+        }
+        input{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        button{
+            padding: 5px 20px;
+            cursor: pointer;
+            background-color: #888;
+            color: white;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Nome: </label>
+        <input type="text" id="txtNome" minlength="4" maxlength="8" required/>
+        <label>Nota: </label>
+        <input type="number" id="numNota" min="0" max="10" required/>
+        <button id="btnValidar">Validar</button>
+        <p id="txtMsg"></p>
+    </form>
+
+    <script>
+        const txtNome = document.getElementById("txtNome");
+        const numNota = document.getElementById("numNota");
+        const txtMsg = document.getElementById("txtMsg");
+        const btnValidar = document.getElementById("btnValidar");
+
+        btnValidar.addEventListener("click",(evt)=>{
+            let estadoValidaco = numNota.validity;
+            let msg = null;
+            if(estadoValidaco.valueMissing){
+                numNota.setCustomValidity("Sem valor");
+                msg = numNota.validationMessage;
+            }else if(estadoValidaco.rangeOverflow){
+                numNota.setCustomValidity("Nota muito alta - diminua ela");
+            }else if(estadoValidaco.rangeUnderflow){
+                numNota.setCustomValidity("Nota muito baixa - aumente ela");
+            }
+
+            // txtMsg.innerHTML = msg;
+            numNota.reportValidity();
+            evt.preventDefault();//evita do botão fazer o submit
+        });
+    </script>
+</body>
+</html>

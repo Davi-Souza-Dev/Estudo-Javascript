@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>DataGridView</title>
+  </head>
+  <body>
+    <div id="dgvProdutos" class="dgv">
+      <div id="dgvTitle" class="dgvTitle">
+        <div class="c1">ID</div>
+        <div class="c2">Produto</div>
+        <div class="c3">Marca</div>
+        <div class="c4">Modelo</div>
+        <div class="c5">Funções</div>
+      </div>
+      <div id="dgvDados" class="dgvDados"></div>
+    </div>
+
+    <div class="janelaView ocultar" id="janelaView">
+      <div class="view" id="view">
+        <div class="campo">
+          <label>ID</label>
+          <input type="text" name="txtId" id="txtId" readonly />
+        </div>
+        <div class="campo">
+          <label>Produto</label>
+          <input type="text" name="txtProduto" id="txtProduto" readonly />
+        </div>
+        <div class="campo">
+          <label>Marca</label>
+          <input type="text" name="txtMarca" id="txtMarca" readonly />
+        </div>
+        <div class="campo">
+          <label>Modelo</label>
+          <input type="text" name="txtModelo" id="txtModelo" readonly />
+        </div>
+        <div id="rodape" class="rodape">
+          <button id="btnClose" class="btnClose">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="janelaView ocultar" id="janelaEdit">
+      <div class="view" id="view">
+        <div class="campo">
+          <label>ID</label>
+          <input type="text" name="txtIdEdit" id="txtIdEdit" readonly />
+        </div>
+        <div class="campo">
+          <label>Produto</label>
+          <input type="text" name="txtProdutoEdit" id="txtProdutoEdit" />
+        </div>
+        <div class="campo">
+          <label>Marca</label>
+          <input type="text" name="txtMarcaEdit" id="txtMarcaEdit" />
+        </div>
+        <div class="campo">
+          <label>Modelo</label>
+          <input type="text" name="txtModeloEdit" id="txtModeloEdit" />
+        </div>
+        <div id="rodape" class="rodape">
+          <button id="btnSave" class="btnSave">Save</button>
+          <button id="btnCloseEdit" class="btnCloseEdit">Close</button>
+        </div>
+      </div>
+    </div>
+    <script src="scirpt.js"></script>
+  </body>
+</html>

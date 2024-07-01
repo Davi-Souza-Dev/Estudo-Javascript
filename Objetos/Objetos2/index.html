@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+</head>
+
+<body>
+
+    <button id="btnTiro">Atirar</button>
+
+
+
+    <script>
+        const btnTiro = document.getElementById('btnTiro');
+        class Carro {
+            constructor(nome, portas) {
+                this.nome = nome;
+                this.portas = portas;
+            }
+            setNome = function (nome) {
+                this.nome = nome;
+            }
+        }
+
+        class Militar extends Carro {
+            constructor(nome, portas, blindagem, municao) {
+                super(nome, portas);
+                this.blindagem = blindagem;
+                this.municao = municao;
+            }
+            atirar = function () {
+                if(this.municao > 0){
+                    this.municao--;
+                }else{
+                    console.log(`${this.nome} está sem munição`)
+                }
+            }
+            dano = function () {
+                if(this.blindagem > 0){
+                    this.blindagem--;
+                }else{
+                    console.log(`${this.nome} Foi destruido`)
+                }
+            }
+        }
+
+        const c1 = new Militar('Armando', 4, 100, 20);
+        const c2 = new Militar('Inimigo', 4, 10, 0);
+        console.log(`Nome: ${c1.nome}`)
+        console.log(`Portas: ${c1.portas}`)
+        console.log(`Blindagem: ${c1.blindagem}`)
+        console.log(`Munição: ${c1.municao}`)
+        console.log("----------------------")
+        console.log(`Nome: ${c2.nome}`)
+        console.log(`Portas: ${c2.portas}`)
+        console.log(`Blindagem: ${c2.blindagem}`)
+        console.log(`Munição: ${c2.municao}`)
+        console.log("----------------------")
+
+        btnTiro.addEventListener('click', (evt) => {
+            c1.atirar();
+            c2.dano();
+        });
+    </script>
+</body>
+
+</html>

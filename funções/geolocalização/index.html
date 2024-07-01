@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <p id="long"></p>
+    <p id="lati"> </p>
+    <script>
+        const long = document.getElementById("long");
+        const lati = document.getElementById("lati");
+
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition,errorPosition);
+        }else{
+            console.log("FALHOU!!!");
+        }
+
+        function showPosition(pos){
+            console.log(pos);
+            long.innerHTML = `Longitude: ${pos.coords.longitude}`;
+            lati.innerHTML = `Latitude: ${pos.coords.latitude}`;
+        }
+        function errorPosition(){
+            console.log("Erro ao pegar a localização");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LIGANDO O NOSSO SITE AO CHART.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Gráficos com JS</title>
+  </head>
+  <body>
+    <!-- PRECISAMOS DE UM CANVAS PARA INICARMOS -->
+
+    <div
+      style="
+        width: 800px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <canvas id="grafico"></canvas>
+    </div>
+
+    <script>
+      //FAZENDO A CONFIGURAÇÂO DO CHARTS.JS
+      const ctx = document.getElementById("grafico");
+      let labels = ["Disonibilidade", "Qualidade", "Performance"];
+      let valores = [0, 0, 0];
+      let grafico1 = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: "OEE",
+              data: valores,
+              borderWidth: 2,
+              borderColor: "lightgreen",
+              backgroundColor: "green",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      //CONFIGURANDO NOSSA API PARA PEGAR OS DADOS
+      const obterDados = () => {
+        const endpoint =
+          "https://b98ff7cd-499e-428e-8b18-d9569804dbce-00-3dghb0lo5oi6v.janeway.replit.dev/";
+        fetch(endpoint) //LIGAR NA API
+          .then((res) => res.json()) //RECEBER OS DADOS
+          .then((res) => {
+            console.log(res.disponibilidade);
+            console.log(res.qualidade);
+            console.log(res.performance);
+            valores[0] = res.disponibilidade;
+            valores[1] = res.qualidade;
+            valores[2] = res.performance;
+            grafico1.update();
+          }) //TRATAR OS DADOS
+          .catch((erro) => {
+            console.log("ERRO: " + erro);
+          }); //RESOLVENDOS ERROS (SE DER ERRO);
+      };
+      //FAZENDO ATUALIZAÇÔES POR TEMPO
+      let intervalo = setInterval(obterDados, 1000);
+    </script>
+  </body>
+</html>

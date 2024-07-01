@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            box-sizing: border-box;
+            font-size: large;
+        }
+        .carros{
+            display: flex;
+            width: 100%;
+            border: 3px solid black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .carro{
+            border: 3px blue solid;
+            background-color: rgb(163, 231, 255);
+            padding: 5px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+        .carro > button{
+            width: 80%;
+            background-color: aqua;
+            color: black;
+        }
+        .carro > button:hover{
+            width: 80%;
+            background-color: aqua;
+            color: black;
+        }
+        .campoForm{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin-bottom: 10px;
+            align-items: flex-start;
+            margin-left: 10px;
+        }
+        .campoForm input{
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 3px;
+        }
+        .campoForm button{
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="criarCarro" class="criarCarro">
+        <div class="campoForm">
+            <label>Nome:</label>
+            <input type="text" name="txtNome" id="txtNome">
+        </div>
+        <div class="campoForm">
+            <label>Portas:</label>
+            <input type="number" name="numPortas" id="numPortas">
+        </div>
+        <div class="campoForm">
+            <label>Blindagem:</label>
+            <input type="number" name="numBlindagem" id="numBlindagem" value="0"disabled>
+        </div>
+        <div class="campoForm">
+            <label for="numMunicao">Munição:</label>
+            <input type="number" name="numMunicao" id="numMunicao" value="0"  disabled> 
+        </div>
+        <div class="campoForm">
+            <label>Tipo:</label>
+            <div class="radio">
+
+                <input type="radio" name="rdTipo" id="rdMilitar" value="1">
+                <label for="rdTipo">Militar</label>
+            </div>
+            <div>
+                <input type="radio" name="rdTipo" id="rdNormal" value="2" checked> 
+                <label>Normal</label>
+            </div>
+        </div>
+        <div class="campoForm">
+            <button id="btnAdd">Adicionar</button>
+        </div>
+        <div class="carros">
+
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

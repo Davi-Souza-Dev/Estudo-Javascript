@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+        .info{
+            display: flex;
+            justify-content: space-around;
+        }
+        .quadrado{
+            display: flex;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        #q1{
+            background-color: red;
+            top: 20px;
+            left: 200px;
+            height: 150px;
+            width: 150px;
+        }
+        #q2{
+            background-color: blue;
+            top: 200px;
+            left: 98px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info" class="info">
+        <p id="posX">posX:</p>
+        <p id="posY">posY</p>
+        <p id="largura">largura:</p>
+        <p id="altura">altura:</p>
+    </div>
+    <div id="q1" class="quadrado"></div>
+    <div id="q2" class="quadrado"></div>
+    <script>
+        const q1 = document.getElementById("q1");
+        const q2 = document.getElementById("q2");
+        const posX = document.getElementById("posX");
+        const posY = document.getElementById("posY");
+        const largura = document.getElementById("largura");
+        const altura = document.getElementById("altura");
+
+        //AccessKey
+        q1.accessKey = "b";
+        q2.accessKey = "n";
+
+        const info = (el)=>{
+            let DOMReat = el.getBoundingClientRect();
+        //Usando a fução
+        posX.innerHTML = `posX: ${Math.round(DOMReat.x)}`;
+        posY.innerHTML = `posY: ${Math.round(DOMReat.y)}`;
+        largura.innerHTML = ` largura: ${Math.round(DOMReat.width)}`;
+        altura.innerHTML = `altura: ${Math.round(DOMReat.height)}`;
+        };
+
+        q1.addEventListener("click",(evt)=>{
+            info(evt.target);
+        });
+        
+        q2.addEventListener("click",(evt)=>{
+            info(evt.target);
+        });
+    </script>
+</body>
+</html>

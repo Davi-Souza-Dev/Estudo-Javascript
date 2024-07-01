@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            box-sizing: border-box;
+            font-size: large;
+        }
+        div.campoForm{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        div.campoForm   input{
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        div.campoForm button{
+            background-color: gray;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .res{
+            border: 3px solid black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="campoForm">
+        <label for="txtNome">Nome:</label>
+        <input type="text" name="txtNome" id="txtNome">
+    </div>
+    <div class="campoForm">
+        <label for="txtIdade">Idade</label>
+        <input type="number" name="txtIdade" id="txtIdade">
+    </div>
+    <div class="campoForm">
+        <button id="btnAdd">Adicionar</button>
+    </div>
+    <div class="res">
+
+    </div>
+    <script src="objeto1.js"></script>
+</body>
+</html>
