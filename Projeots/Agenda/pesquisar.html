@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="pesquisa">
+      <div class="campoPesq">
+        <label>ID</label>
+        <input type="radio" name="rdPesquisa" id="rdID" value="id" />
+      </div>
+      <div class="campoPesq">
+        <label>NOME</label>
+        <input
+          type="radio"
+          name="rdPesquisa"
+          id="rdNome"
+          value="nome"
+          checked
+        />
+      </div>
+      <div class="campoPesq">
+        <label>TELEFONE</label>
+        <input type="radio" name="rdPesquisa" id="rdTel" value="tel" />
+      </div>
+      <div class="campoPesq">
+        <label>E-mail</label>
+        <input type="radio" name="rdPesquisa" id="rdEmail" value="email" />
+      </div>
+      <div class="campoPesq">
+        <label>Nacimento</label>
+        <input type="radio" name="rdPesquisa" id="rdNasc" alue="nasc" />
+      </div>
+      <div class="campoPesq">
+        <label>Pesquisar</label>
+        <input type="text" name="txtPesq" id="txtPesq"/>
+        <!-- <div class="wrap-input-17">
+          <div class="search-box">
+            <button class="btn-search">🔍</button>
+            <input
+              type="text"
+              class="input-search"
+              placeholder="Digite..."
+              id="txtPesq"
+            />
+          </div>
+        </div> -->
+      </div>
+      <div class="campoPesq">
+        <button id="btnBuscar">Buscar</button>
+      </div>
+    </div>
+    <div id="result" class="campoResult">
+      <div class="dgv" id="dgv">
+        <div id="dgvTitle" class="dgvTitle">
+          <div class="c1 t">ID</div>
+          <div class="c2 t">Nome</div>
+          <div class="c3 t">Tel</div>
+          <div class="c4 t">Email</div>
+          <div class="c5 t">NASC</div>
+        </div>
+        <div id="dgvDados" class="dgvDados">
+          <div class="dgvLinha" id="dgvLinha">
+            <div class="c1 c">ID</div>
+            <div class="c2 c">Nome</div>
+            <div class="c3 c">Tel</div>
+            <div class="c4 c">Email</div>
+            <div class="c5 c">NASC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script/pesquisar.js"></script>
+  </body>
+</html>

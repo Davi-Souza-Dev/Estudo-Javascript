@@ -1,0 +1,485 @@
+* {
+  margin: 0px;
+  border: 0px;
+  border: none;
+  box-sizing: border-box;
+  
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  /* border:1px solid red; */
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  margin-bottom: -2px;
+  /* border:1px solid red; */
+}
+
+.menu > button {
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 10px 10px 0px 0px;
+  margin: 0px 2px 0px 0px;
+}
+
+.menu > button.selected {
+  background: #ddd;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  /* border:1px solid red; */
+  background: #ddd;
+  height: 100vh;
+}
+
+.content > iframe {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Novo */
+#novo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+.campoForm{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.campoForm input{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.campoForm label{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.btnsForm{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.btnsForm > button{
+    width: 150px;
+    height:35px;
+    background-color: black;
+    margin-left: 10px;
+    color: white;
+    text-transform:uppercase ;
+    font-size: 1rem;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.btnsForm > button:hover{
+    background: rgba(0, 0, 0, 0.491);
+}
+
+.btnsForm > button#btnCancel{
+    background: red;
+}
+
+.btnsForm > button#btnCancel:hover{
+    background: rgba(255, 0, 0, 0.395);
+}
+
+
+/* PESQUISAR */
+.pesquisa{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row; 
+}
+
+.campoPesq label{
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.campoPesq{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px;
+  /* border: 1px solid black; */
+}
+
+.campoPesq > button{
+  width: 100px;
+  height:35px;
+  background-color: black;
+  margin-left: 10px;
+  color: white;
+  text-transform:uppercase ;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+
+.wrap-input-17 * {
+  box-sizing: border-box;
+  
+ }
+ 
+ .wrap-input-17 .search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+ }
+ 
+ .wrap-input-17 .input-search{
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: 
+ #000000;
+  padding-right: 40px;
+  color:
+ #000000;
+ }
+ .wrap-input-17 .input-search::placeholder{
+  color:
+ rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+ }
+ .wrap-input-17 .btn-search{
+  width: 25px;
+  height: 25px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:
+ #000000 ;
+  background-color:
+ transparent;
+  pointer-events: painted;  
+ }
+ .wrap-input-17 .btn-search:focus ~ .input-search{
+  width: 300px;
+  height: 25px;
+  border-radius: 0px;
+  background-color: 
+ transparent;
+  border-bottom:1px solid 
+ rgba(0, 0, 0, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+ }
+ .wrap-input-17 .input-search:focus{
+  width: 300px;
+  height: 25px;
+  border-radius: 0px;
+  background-color: 
+ transparent;
+  border-bottom:1px solid 
+ rgba(0, 0, 0, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.campoResult{
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+
+.dgv{
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.dgvTitle{
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: inherit;
+}
+
+
+.dgvDados{
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: inherit;
+}
+
+.dgvLinha{
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: inherit;
+}
+
+.dgvLinha:hover{
+  border: 2px solid red;
+}
+
+.c1{
+  width: 50px;
+}
+.c2{
+  width: 250px;
+}
+.c3{
+  width: 150px;
+}
+.c4{
+  width: 300px;
+}
+.c5{
+  width: 200px;
+}
+
+.c6{
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t{
+  background-color: black;
+  color: white;
+  border-left: 1px solid white;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.c{
+  background: white;
+  border-bottom: 1px solid black;
+  border-left: 1px solid white;
+  height: 25px;
+  display: flex;
+}
+
+/* GESTÂO */
+
+.gestao{
+  margin-top: 10px;
+}
+
+.dgvImg{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.dgvImg:hover{
+  width: 20px;
+  height: 20px;
+}
+
+.dgvImg svg path{
+  fill: black;
+}
+
+
+/* FORMULARIO DE EDIÇÃO */
+
+
+.janelaEdit{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0000002c;
+  backdrop-filter: blur(10px);
+  display: none;
+}
+
+.form {
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  padding: 20px;
+  background: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  width: 500px;
+}
+
+.title {
+  color: var(--font-color);
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.title span {
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.input {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.login-with {
+  display: flex;
+  gap: 20px;
+}
+
+.button-log {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  color: var(--font-color);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form > .btns > button{
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.btns > #btnCancelar{
+  box-shadow: 4px 4px red;
+  border: 2px solid red;
+}
+
+.btns > #btnSalvar{
+  box-shadow: 4px 4px rgb(0, 255, 166);
+  border: 2px solid  rgb(0, 255, 166);
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="janelaEdit" id="janelaEdit">
+      <form class="form">
+        <input
+          type="text"
+          placeholder="ID"
+          name="txtID"
+          id="txtID"
+          class="input"
+          readonly
+        />
+        <input
+          type="text"
+          placeholder="Nome"
+          name="txtNome"
+          id="txtNome"
+          class="input"
+        />
+        <input
+          type="text"
+          placeholder="Telefone"
+          name="txtTel"
+          id="txtTel"
+          class="input"
+        />
+        <input
+          type="text"
+          placeholder="Email"
+          name="txtEmail"
+          id="txtEmail"
+          class="input"
+        />
+        <input
+          type="text"
+          placeholder="Nascimento"
+          name="txtNasc"
+          id="txtNasc"
+          class="input"
+        />
+        <div class="btns">
+          <button class="btnSalvar" id="btnSalvar">Salvar</button>
+          <button class="btnCancelar" id="btnCancelar">Cancelar</button>
+        </div>
+      </form>
+    </div>
+    <div class="dgv gestao" id="dgv">
+      <div id="dgvTitle" class="dgvTitle">
+        <div class="c1 t">ID</div>
+        <div class="c2 t">Nome</div>
+        <div class="c3 t">Tel</div>
+        <div class="c4 t">Email</div>
+        <div class="c5 t">NASC</div>
+        <div class="c6 t">COMANDOS</div>
+      </div>
+      <div id="dgvDados" class="dgvDados">
+        <!-- <div class="dgvLinha" id="dgvLinha">
+          <div class="c1 c">ID</div>
+          <div class="c2 c">Nome</div>
+          <div class="c3 c">Tel</div>
+          <div class="c4 c">Email</div>
+          <div class="c5 c">NASC</div>
+        </div> -->
+      </div>
+    </div>
+    <script src="script/gestao.js" type="module"></script>
+  </body>
+</html>
